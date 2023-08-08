@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="webstudio main page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,11 +23,11 @@
   <body>
     <header class="header">
       <div class="container header-container">
+        <a class="header-logo" href="./index.html"
+          >Web<span class="header-logo-dark">Studio</span></a
+        >
         <!-- header main menu -->
         <nav class="header-navigation">
-          <a class="header-logo" href="./index.html"
-            >Web<span class="header-logo-dark">Studio</span></a
-          >
           <ul class="header-navigation-list list">
             <li class="header-navigation-item">
               <a class="header-navigation-link current" href="./index.html"
@@ -58,6 +59,18 @@
             </li>
           </ul>
         </address>
+        <!-- <header class="page-header"> -->
+        <!-- <div class="container"> -->
+        <!-- aria-expanded="false" -->
+        <!-- aria-controls="mobile-menu" -->
+        <!-- burger menu -->
+        <button class="menu-toggle js-open-menu">
+          <svg class="menu-toggle-icon" width="32" height="22">
+            <use href="./images/icons.svg#menu-hamburger"></use>
+          </svg>
+        </button>
+        <!-- </div> -->
+        <!-- </header> -->
       </div>
     </header>
     <main class="main-content">
@@ -75,7 +88,7 @@
       <!-- main streams -->
 
       <section class="streams">
-        <div class="container sterams-container">
+        <div class="container streams-container">
           <h2 class="visually-hidden">Main Streams</h2>
           <ul class="streams-list list">
             <li class="streams-item">
@@ -138,6 +151,10 @@
           <ul class="activity-list list">
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/desktop-app.jpg    1x,
+                  ./images/desktop-app-2x.jpg 2x
+                "
                 src="./images/desktop-app.jpg"
                 alt="desktop aplication"
                 width="360"
@@ -145,6 +162,10 @@
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/mobile-app.jpg    1x,
+                  ./images/mobile-app-2x.jpg 2x
+                "
                 src="./images/mobile-app.jpg"
                 alt="mobile aplication"
                 width="360"
@@ -152,6 +173,10 @@
             </li>
             <li class="activity-item">
               <img
+                srcset="
+                  ./images/all-platform-app.jpg    1x,
+                  ./images/all-platform-app-2x.jpg 2x
+                "
                 src="./images/all-platform-app.jpg"
                 alt="same aplication for desktop and mobile platform"
                 width="360"
@@ -164,11 +189,15 @@
       <!-- our team -->
 
       <section class="team">
-        <div class="container">
+        <div class="container team-container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/mark-guerrero.jpg    1x,
+                  ./images/mark-guerrero-2x.jpg 2x
+                "
                 src="./images/mark-guerrero.jpg"
                 alt="Mark Guerrero photo"
                 width="264"
@@ -210,6 +239,7 @@
             </li>
             <li class="team-item">
               <img
+                srcset="./images/tom-ford.jpg 1x, ./images/tom-ford-2x.jpg 2x"
                 src="./images/tom-ford.jpg"
                 alt="Tom Ford photo"
                 width="264"
@@ -252,6 +282,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/camila-garcia.jpg    1x,
+                  ./images/camila-garcia-2x.jpg 2x
+                "
                 src="./images/camila-garcia.jpg"
                 alt="Camila Garcia photo"
                 width="264"
@@ -293,6 +327,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/daniel-wilson.jpg    1x,
+                  ./images/daniel-wilson-2x.jpg 2x
+                "
                 src="./images/daniel-wilson.jpg"
                 alt="Daniel Wilson photo"
                 width="264"
@@ -452,6 +490,81 @@
         </div>
       </div>
     </footer>
+
+    <!-- mobile menu -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="modal-close-button js-close-menu" type="button">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-black-18dp"></use>
+        </svg>
+      </button>
+
+      <div class="menu-mobile">
+        <div class="menu-top">
+          <ul class="menu-navigation-list list">
+            <li>
+              <a class="menu-navigation-link link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li>
+              <a class="menu-navigation-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li><a class="menu-navigation-link link" href="">Contacts</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-contacts">
+          <ul class="menu-contacts-list list">
+            <li>
+              <a class="menu-tel-link link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li>
+              <a class="menu-email-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="menu-links">
+          <ul class="menu-links-list list">
+            <li class="menu-links-item">
+              <a class="menu-links-link link" href="">
+                <svg class="menu-links-icon" width="24" height="24">
+                  <use href="./images/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-links-item">
+              <a class="menu-links-link link" href="">
+                <svg class="menu-links-icon" width="24" height="24">
+                  <use href="./images/icons.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-links-item">
+              <a class="menu-links-link link" href="">
+                <svg class="menu-links-icon" width="24" height="24">
+                  <use href="./images/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-links-item">
+              <a class="menu-links-link link" href="">
+                <svg class="menu-links-icon" width="24" height="24">
+                  <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button class="modal-close-button" type="button" data-modal-close>
@@ -530,6 +643,15 @@
         </form>
       </div>
     </div>
-    <script class="is-hidden" src="./js/modal.js"></script>
+
+    <!-- scripts -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
